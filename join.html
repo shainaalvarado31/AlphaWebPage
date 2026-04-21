@@ -1,0 +1,126 @@
+<!--
+    JOIN PAGE - Alpha Computer Association
+    =====================================
+    This page contains a membership application form for students interested
+    in joining Alpha Computer Association. The form collects personal information,
+    academic details, and areas of interest to process membership applications.
+    Uses Netlify forms for form submission and handling.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and page title -->
+  <meta charset="UTF-8">
+  <title>Join Alpha</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Site header with navigation -->
+<header class="site-header">
+  <div class="container navbar">
+    <!-- Organization logo -->
+    <div class="brand">
+      <img src="images/alpha-logo.png" class="logo">
+    </div>
+
+    <!-- Main navigation menu -->
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Alpha</a>
+      <a href="committee.html">Committee</a>
+      <a href="events.html">Events & Activities</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Main content area -->
+<main class="page-section">
+
+  <!-- Page header section -->
+  <section class="container">
+    <h2 class="page-title">Join Alpha</h2>
+    <!-- Introductory lead paragraph -->
+    <p class="lead">
+      Interested in technology, leadership, and growth? Fill out the form below to become part of Alpha.
+    </p>
+  </section>
+
+  <!-- Membership application form -->
+  <section class="container form-card">
+
+    <!-- Netlify form for membership application -->
+    <form name="join-alpha" method="POST" data-netlify="true">
+
+      <!-- Hidden form name for Netlify -->
+      <input type="hidden" name="form-name" value="join-alpha">
+
+      <!-- Full name field -->
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <!-- Student number field -->
+      <div class="form-group">
+        <label>Student Number</label>
+        <input type="text" name="student-number" required>
+      </div>
+
+      <!-- Email field -->
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <!-- Major field -->
+      <div class="form-group">
+        <label>Major</label>
+        <input type="text" name="major" required>
+      </div>
+
+      <!-- Academic year dropdown -->
+      <div class="form-group">
+        <label>Academic Year</label>
+        <select name="year" required>
+          <option value="">Select your academic year</option>
+          <option>Freshman (1st Year)</option>
+          <option>Sophomore (2nd Year)</option>
+          <option>Junior (3rd Year)</option>
+          <option>Senior (4th Year)</option>
+          <option>5th Year or More</option>
+        </select>
+      </div>
+
+      <!-- Areas of interest textarea -->
+      <div class="form-group">
+        <label>Areas of Interest</label>
+        <textarea name="interests" placeholder="Programming, Cybersecurity, Data, etc..."></textarea>
+      </div>
+
+      <!-- Motivation textarea -->
+      <div class="form-group">
+        <label>Why do you want to join Alpha?</label>
+        <textarea name="message"></textarea>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="submit-btn">Submit Application</button>
+
+    </form>
+
+  </section>
+
+</main>
+
+<!-- Site footer with copyright information -->
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Shaina N. Alvarado Febus</p>
+  </div>
+</footer>
+
+</body>
+</html>

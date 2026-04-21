@@ -1,26 +1,34 @@
+<!--
+    ABOUT PAGE - Alpha Computer Association
+    ======================================
+    This page provides information about Alpha Computer Association's mission, vision,
+    and features the organization's mascot Pablito. It includes sections for:
+    - Mission and Vision statements
+    - Fun fact about the mascot
+    - Featured image with caption about workshops
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding, viewport, and page title -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Computer Association | About</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <!-- Site header with navigation -->
     <header class="site-header">
         <div class="container navbar">
+            <!-- Organization logo -->
             <div class="brand">
-                <div class="logo-box">
-                    <img src="images/alpha-logo.jpg" alt="Alpha Logo" />
-                </div>
-                <div class="brand-text">
-                    <h1>Alpha</h1>
-                    <p>Computer Association</p>
-                </div>
+                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo" />
             </div>
 
+            <!-- Main navigation menu -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Alpha</a>
@@ -29,20 +37,30 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
 
-            <a class="join-btn" href="contact.html">Join Us</a>
+            <!-- Call-to-action button for joining -->
+            <a class="join-btn" href="join.html">Join Us</a>
         </div>
     </header>
 
+    <!-- Main content area -->
     <main>
+
+        <!-- 🔹 SECTION 1: Mission & Vision -->
+        <!-- Two-column section displaying mission and vision statements with featured image -->
         <section class="content-card">
             <div class="two-col">
+
+                <!-- Mission and vision boxes -->
                 <div class="mission-grid">
                     <div class="mission-box">
                         <h3>Mission</h3>
                         <p>
-                            Our mission is to promote academic growth, technological
-                            development, teamwork, and leadership among students through
-                            educational activities, workshops, and community engagement.
+                            Alpha Computer Association is committed to promoting academic
+                            growth, leadership, collaboration, and technological development
+                            among students. Through workshops, meetings, fundraising
+                            initiatives, and educational activities, Alpha creates opportunities
+                            for members to strengthen their skills and prepare for future careers
+                            in technology and computing.
                         </p>
                     </div>
 
@@ -50,23 +68,68 @@
                         <h3>Vision</h3>
                         <p>
                             Our vision is to become a recognized student organization that
-                            inspires innovation, supports professional preparation, and
-                            connects students with opportunities in technology and computing.
+                            inspires innovation, teamwork, and professional growth within the
+                            university community. Alpha seeks to connect students with meaningful
+                            experiences, strengthen interest in technology, and encourage active
+                            participation in academic and professional opportunities.
                         </p>
                     </div>
                 </div>
 
-                <div class="feature-image"></div>
+                <!-- Featured image of Alpha activity -->
+                <div class="feature-image">
+                    <img src="images/alpha-activity.jpeg" alt="Alpha Computer Association activity" />
+                </div>
+
             </div>
         </section>
+
+        <!-- 🔹 SECTION 2: Fun Fact (Pablito) -->
+        <!-- Section featuring the organization's mascot with fun fact -->
+        <section class="content-card">
+            <div class="fun-fact">
+
+                <!-- Mascot image -->
+                <img src="images/pablito.png" alt="Pablito Mascot" class="pablito-img">
+
+                <h3>Fun Fact</h3>
+                <p>
+                    Alpha Computer Association has its own mascot named <strong>Pablito</strong> 🐧.
+                    Pablito is a friendly penguin who represents our community, teamwork, and
+                    passion for technology. You’ll often see him in our events, promotions,
+                    and activities, bringing energy and fun to Alpha!
+                </p>
+
+            </div>
+        </section>
+
+        <!-- 🔹 SECTION 3: Extra Image -->
+        <!-- Section with overlay image and caption about workshops -->
+        <section class="content-card">
+            <div class="extra-image">
+                <img src="images/alpha-event.jpeg" alt="Alpha workshop or event">
+                <!-- Caption overlay on the image -->
+                <div class="image-caption">
+                    <h3>Hands-on Workshops</h3>
+                    <p>
+                        Alpha members actively participate in hands-on workshops where they
+                        develop technical skills such as programming, hardware setup, and
+                        problem-solving in real-world scenarios.
+                    </p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- Site footer with copyright information -->
     <footer class="site-footer">
         <div class="container">
-            <p>© 2026 Alpha Computer Association. All rights reserved.</p>
+            <p>© 2026 Shaina N. Alvarado Febus. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 

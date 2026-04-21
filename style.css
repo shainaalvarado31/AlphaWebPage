@@ -1,23 +1,46 @@
+/* ===== VARIABLES ===== */
+/* Define custom CSS properties (variables) for consistent theming across the site */
 :root {
-  --bg: #050505;
-  --panel: #111111;
-  --panel-soft: #1a1a1a;
-  --gold: #b88412;
-  --gold-soft: #e59a43;
-  --text: #f5f5f5;
-  --muted: #cfcfcf;
-  --accent: #6f6572;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #050505; /* Dark background color for the body */
+  --panel: #111111; /* Slightly lighter panel background */
+  --gold: #b88412; /* Primary gold color for accents */
+  --gold-soft: #e59a43; /* Softer gold for buttons and highlights */
+  --text: #f5f5f5; /* Light text color */
+  --muted: #cfcfcf; /* Muted text color for secondary content */
+  --accent: #6f6572; /* Accent color for hover states */
+  --border: rgba(255, 255, 255, 0.08); /* Subtle border color */
 }
 
+/* ===== PAGE TITLE ===== */
+/* Styles for the main title on each page */
+.page-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 40px; /* espacio entre título y fotos */
+  margin-top: 10px;
+  color: var(--text);
+}
+
+/* opcional: si quieres que resalte más */
+/* Decorative underline for the page title */
+.page-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--gold-soft);
+  margin: 12px auto 0;
+  border-radius: 999px;
+}
+
+/* ===== RESET ===== */
+/* Basic CSS reset to ensure consistent box-sizing and remove default margins/padding */
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+/* Global body styles */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -25,367 +48,533 @@ body {
   color: var(--text);
 }
 
+/* Remove default link decorations and inherit color */
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
+/* Ensure images are responsive and block-level */
 img {
   max-width: 100%;
   display: block;
 }
 
+/* ===== LAYOUT ===== */
+/* Container class for centering content with max width */
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
 }
 
+/* ===== NAVBAR ===== */
+/* Header section padding */
 .site-header {
-  padding: 24px 0 10px;
+  padding: 12px 0;
 }
 
+/* Flexbox navbar layout */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
+  min-height: 100px;
+  gap: 20px;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* Logo styling with hover effect */
+.logo {
+  width: 220px;
+  transition: 0.3s;
 }
 
-.logo-box {
-  width: 70px;
-  height: 70px;
-  border-radius: 16px;
-  background: #fff;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  padding: 6px;
+.logo:hover {
+  transform: scale(1.05);
 }
 
-.logo-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.brand-text h1 {
-  margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.1;
-}
-
-.brand-text p {
-  margin: 4px 0 0;
-  color: var(--muted);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
+/* Navigation links container */
 .nav-links {
   display: flex;
-  align-items: center;
   gap: 18px;
   flex-wrap: wrap;
 }
 
+/* Individual nav link styles */
 .nav-links a {
-  padding: 12px 18px;
+  padding: 10px 16px;
   border-radius: 999px;
-  transition: 0.25s ease;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   background: var(--accent);
 }
 
+/* Join button styling */
 .join-btn {
-  padding: 12px 22px;
+  padding: 10px 20px;
   border-radius: 999px;
   background: var(--gold-soft);
-  color: #111;
+  color: black;
   font-weight: bold;
 }
 
-.hero-card,
-.content-card,
-.form-card {
+/* ===== HERO CARD ===== */
+/* Main hero section container with gradient background */
+.hero-card {
   width: min(1240px, 96%);
-  margin: 22px auto 0;
-  background: linear-gradient(180deg, var(--gold), #0f0a00 100%);
-  border-radius: 34px;
-  padding: 42px;
-  border: 1px solid rgba(255,255,255,0.06);
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, var(--gold), #0f0a00);
 }
 
-.hero-grid,
-.two-col {
+/* Grid layout for hero content and image */
+.hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 32px;
+  gap: 40px;
   align-items: center;
 }
 
-.hero-copy h2,
-.page-title,
-.section-title,
-.card-title {
-  font-size: clamp(2rem, 4vw, 3.4rem);
-  margin: 0 0 18px;
+/* Hero text content */
+.hero-copy h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-.hero-copy p,
-.lead,
-.event-card p,
-.contact-info p,
-.mission-box p {
-  color: #f1f1f1;
+.hero-copy p {
   line-height: 1.6;
-  font-size: 1.08rem;
+  color: #f1f1f1;
 }
 
+/* ===== BOTONES ===== */
+/* Container for hero action buttons */
 .hero-actions {
-  margin-top: 28px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-.primary-btn,
-.secondary-btn {
-  padding: 14px 24px;
-  border-radius: 999px;
-  font-weight: 700;
-  display: inline-block;
-}
-
+/* Primary button style */
 .primary-btn {
   background: var(--gold-soft);
-  color: #111;
+  padding: 12px 22px;
+  border-radius: 999px;
+  color: black;
+  font-weight: bold;
 }
 
+/* Secondary button style */
 .secondary-btn {
-  border: 1px solid rgba(255,255,255,0.18);
-  color: #fff;
+  border: 1px solid white;
+  padding: 12px 22px;
+  border-radius: 999px;
+  margin-left: 10px;
 }
 
-.hero-image,
-.feature-image {
-  min-height: 430px;
-  border-radius: 90px;
-  background:
-    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)),
-    url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80")
-    center/cover no-repeat;
+/* ===== HERO IMAGE ===== */
+/* Hero image container with fixed height and rounded corners */
+.hero-image {
+  height: 420px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
 }
 
-.page-section {
-  padding: 40px 0 10px;
+/* Image styling within hero container */
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* Overlay for darkening the hero image */
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== ABOUT ===== */
+/* Content card container for about section */
+.content-card {
+  width: min(1240px, 96%);
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, var(--gold), #0f0a00);
+}
+
+/* Two-column grid layout */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Grid for mission boxes */
 .mission-grid {
   display: grid;
   gap: 24px;
 }
 
+/* Individual mission box styling */
 .mission-box {
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
   padding: 24px;
-  border-radius: 24px;
 }
 
 .mission-box h3 {
   margin-top: 0;
-  font-size: 1.6rem;
-}
-
-.committee-title-wrap {
-  text-align: center;
-  margin-bottom: 26px;
-}
-
-.committee-chip {
-  display: inline-block;
-  background: var(--accent);
-  padding: 14px 28px;
-  border-radius: 999px;
+  margin-bottom: 12px;
+  color: var(--text);
   font-size: 1.8rem;
 }
 
+.mission-box p {
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* Feature image container */
+.feature-image {
+  height: 500px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Fun fact section styling */
+.fun-fact {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.fun-fact h3 {
+  color: var(--gold-soft);
+  margin-bottom: 10px;
+}
+
+.fun-fact p {
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* Pablito image styling with hover effect */
+.pablito-img {
+  width: 180px;
+  margin: 0 auto 20px;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.pablito-img:hover {
+  transform: scale(1.05);
+}
+
+/* Extra image container with overlay */
+.extra-image {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.extra-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.extra-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* Image caption overlay */
+.image-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.image-caption h3 {
+  margin: 0;
+  color: var(--gold-soft);
+}
+
+.image-caption p {
+  margin-top: 8px;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* ===== CONTACT ===== */
+/* Grid layout for contact section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 40px;
+}
+
+/* Contact information styling */
+.contact-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+/* Override form card margins in contact grid */
+.contact-grid .form-card {
+  margin: 0;     
+  max-width: 100%; 
+}
+
+/* ===== COMMITTEE ===== */
+/* Grid layout for committee members */
 .committee-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  gap: 30px;
   justify-items: center;
+  margin-top: 30px;
 }
 
+/* Individual member card styling */
 .member-card {
   background: #e99844;
-  border-radius: 28px;
-  padding: 22px;
+  padding: 20px;
+  border-radius: 25px;
   text-align: center;
-  color: #fff;
   width: 260px;
 }
 
-.member-card h3 {
-  margin: 12px 0 14px;
-  font-size: 1.3rem;
-}
-
+/* Avatar container */
 .avatar {
   width: 140px;
   height: 180px;
   margin: 0 auto 20px;
-  border-radius: 999px;
-  background:
-    linear-gradient(rgba(255,255,255,0.06), rgba(255,255,255,0.02)),
-    url("https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=800&q=80")
-    center/cover no-repeat;
-  border: 6px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Member role badge */
 .member-role {
   background: #6f6572;
   border-radius: 999px;
-  padding: 12px 16px;
-  font-size: 1.2rem;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 36px;
-}
-
-.event-card {
   padding: 10px;
 }
 
-.event-image {
-  height: 310px;
-  border-radius: 80px;
-  background:
-    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
-    url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=80")
-    center/cover no-repeat;
-  margin-bottom: 24px;
-}
-
-.event-card h3 {
-  font-size: 2.1rem;
-  margin-bottom: 14px;
-}
-
-.contact-grid {
+/* ===== EVENTS ===== */
+/* Grid layout for events */
+.real-events-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 34px;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.form-card {
-  background: linear-gradient(180deg, #0d0d0d, #111);
+/* Individual event card styling */
+.real-event-card {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 24px;
 }
 
-.form-card label {
+/* Poster wrapper container */
+.poster-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+/* Event poster image styling with hover effect */
+.event-poster {
+  width: auto;
+  max-width: 100%;
+  max-height: 750px;
+  object-fit: contain;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
   display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin: 0 auto;
 }
 
-.form-card input,
-.form-card textarea {
+.event-poster:hover {
+  transform: scale(1.02);
+}
+
+.real-event-card h3 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.real-event-card p {
+  line-height: 1.6;
+  color: #f5f5f5;
+}
+
+/* ===== MODAL ===== */
+/* Modal overlay background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 40px;
+  left: 0;
+  top: 0;
   width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 18px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  background: #1a1a1a;
-  color: #fff;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-.form-card textarea {
-  min-height: 140px;
-  resize: vertical;
+/* Modal content container */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 20px;
 }
 
-.form-card button {
-  padding: 14px 24px;
-  border: none;
-  border-radius: 999px;
-  background: var(--gold-soft);
-  color: #111;
+/* Close button for modal */
+.close {
+  position: absolute;
+  top: 18px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
   font-weight: bold;
   cursor: pointer;
 }
 
-.contact-info {
-  padding: 20px 8px;
+/* ===== FORM ===== */
+/* Form card container */
+.form-card {
+  background: #121212;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 40px auto;
 }
 
-.contact-info h2 {
-  margin-top: 0;
-  font-size: 2.5rem;
+/* Form label styling */
+.form-card label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
 }
 
-.site-footer {
-  padding: 34px 0 50px;
+/* Form input, select, and textarea styling */
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: white;
+}
+
+.form-card select {
+  margin-bottom: 25px;
+}
+
+.form-card textarea {
+  min-height: 120px;
+}
+
+/* Form submit button */
+.form-card button {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  border-radius: 999px;
+  background: var(--gold-soft);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Lead text styling */
+.lead {
   text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+/* Site footer styling */
+.site-footer {
+  text-align: center;
+  padding: 30px;
   color: var(--muted);
 }
 
-@media (max-width: 980px) {
+/* ===== RESPONSIVE ===== */
+/* Media queries for responsive design on screens smaller than 900px */
+@media (max-width: 900px) {
   .hero-grid,
-  .two-col,
-  .contact-grid,
-  .events-grid,
-  .committee-grid {
+  .two-col {
     grid-template-columns: 1fr;
   }
 
-  .hero-card,
-  .content-card,
-  .form-card {
-    padding: 26px;
+  .logo {
+    width: 160px;
   }
 
-  .hero-image,
-  .feature-image {
-    min-height: 320px;
-    border-radius: 40px;
-  }
-
-  .committee-grid {
-    gap: 20px;
-  }
-}
-
-@media (max-width: 640px) {
-  .navbar {
-    justify-content: center;
-  }
-
-  .nav-links {
-    justify-content: center;
-  }
-
-  .page-title,
-  .hero-copy h2,
-  .section-title,
-  .card-title {
+  .hero-copy h2 {
     font-size: 2rem;
   }
 
-  .committee-chip {
-    font-size: 1.3rem;
+  .feature-image,
+  .hero-image {
+    height: 320px;
+  }
+
+  .extra-image img {
+    height: 280px;
+  }
+
+  .modal-content {
+    max-width: 95%;
+    max-height: 80%;
   }
 }

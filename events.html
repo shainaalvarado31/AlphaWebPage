@@ -1,26 +1,35 @@
+<!--
+    EVENTS PAGE - Alpha Computer Association
+    =======================================
+    This page showcases Alpha Computer Association's events and activities.
+    It features a grid of event cards with posters and descriptions for:
+    - Member Meeting (board nomination/selection)
+    - Brownie Pre-Sale (fundraising activity)
+    - Business Intelligence en Acción (educational workshop)
+    Includes a modal for viewing enlarged event posters.
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Meta tags for character encoding, viewport, and page title -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alpha Computer Association | Events</title>
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <!-- Site header with navigation -->
     <header class="site-header">
         <div class="container navbar">
+            <!-- Organization logo -->
             <div class="brand">
-                <div class="logo-box">
-                    <img src="images/alpha-logo.jpg" alt="Alpha Logo" />
-                </div>
-                <div class="brand-text">
-                    <h1>Alpha</h1>
-                    <p>Computer Association</p>
-                </div>
+                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo" />
             </div>
 
+            <!-- Main navigation menu -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Alpha</a>
@@ -29,39 +38,80 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
 
-            <a class="join-btn" href="contact.html">Join Us</a>
+            <!-- Call-to-action button for joining -->
+            <a class="join-btn" href="join.html">Join Us</a>
         </div>
     </header>
 
+    <!-- Main content area -->
     <main class="page-section">
-        <section class="container events-grid">
-            <article class="event-card">
-                <div class="event-image"></div>
-                <h3>Power BI Workshop</h3>
+        <!-- Page header section -->
+        <section class="container">
+            <h2 class="page-title">Events & Activities</h2>
+            <!-- Introductory lead paragraph -->
+            <p class="lead">
+                Alpha Computer Association promotes participation, leadership, collaboration,
+                and student engagement through educational workshops, meetings, and fundraising initiatives.
+            </p>
+        </section>
+
+        <!-- Events grid section -->
+        <section class="container events-grid real-events-grid">
+            <!-- Member Meeting Event -->
+            <article class="event-card real-event-card">
+                <div class="poster-wrapper">
+                    <img src="images/reunion-miembros.jpeg" alt="Member Meeting Event" class="event-poster" onclick="openModal(this.src)">
+                </div>
+                <h3>Member Meeting</h3>
                 <p>
-                    Learn the fundamentals of data visualization, dashboards, and report
-                    building using Power BI in a hands-on workshop for students.
+                    This activity encouraged active participation from Alpha members in the
+                    nomination and selection process for the new student board. It promoted
+                    leadership, collaboration, and involvement within the organization.
                 </p>
             </article>
 
-            <article class="event-card">
-                <div class="event-image"></div>
-                <h3>Excel Workshop</h3>
+            <!-- Brownie Pre-Sale Event -->
+            <article class="event-card real-event-card">
+                <div class="poster-wrapper">
+                    <img src="images/brownies.jpeg" alt="Brownie Pre-Sale Event" class="event-poster" onclick="openModal(this.src)">
+                </div>
+                <h3>Brownie Pre-Sale</h3>
                 <p>
-                    Improve your spreadsheet skills with practical exercises in formulas,
-                    tables, formatting, and data organization for academic and
-                    professional use.
+                    Alpha organized a brownie pre-sale as a fundraising initiative to support
+                    student activities and future events. This activity helped strengthen teamwork,
+                    planning, and promotion skills within the organization.
+                </p>
+            </article>
+
+            <!-- Business Intelligence Workshop -->
+            <article class="event-card real-event-card">
+                <div class="poster-wrapper">
+                    <img src="images/bi-accion.jpeg" alt="Business Intelligence Event" class="event-poster" onclick="openModal(this.src)">
+                </div>
+                <h3>Business Intelligence en Acción</h3>
+                <p>
+                    This educational event introduced students to Business Intelligence concepts,
+                    including analytical maturity, data governance, and emerging trends. It also
+                    connected students with professional experiences related to technology and analytics.
                 </p>
             </article>
         </section>
     </main>
 
+    <!-- Site footer with copyright information -->
     <footer class="site-footer">
         <div class="container">
-            <p>© 2026 Alpha Computer Association. All rights reserved.</p>
+            <p>© 2026 Shaina N. Alvarado Febus. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Image modal for viewing enlarged event posters -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Expanded event poster">
+    </div>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
 
