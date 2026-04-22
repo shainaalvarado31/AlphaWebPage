@@ -7,7 +7,8 @@
     visión, miembros del comité, actividades y un formulario de contacto para los visitantes interesados en unirse o colaborar 
     con la asociación.
 */
-/* ===== VARIABLES ===== */
+
+/* ===== CSS CUSTOM PROPERTIES (VARIABLES) ===== */
 /* Define custom CSS properties (variables) for consistent theming across the site */
 :root {
   --bg: #050505; /* Dark background color for the body */
@@ -20,7 +21,7 @@
   --border: rgba(255, 255, 255, 0.08); /* Subtle border color */
 }
 
-/* ===== PAGE TITLE ===== */
+/* ===== PAGE TITLE STYLING ===== */
 /* Styles for the main title on each page */
 .page-title {
   text-align: center;
@@ -31,7 +32,6 @@
   color: var(--text);
 }
 
-/* opcional: si quieres que resalte más */
 /* Decorative underline for the page title */
 .page-title::after {
   content: "";
@@ -43,7 +43,7 @@
   border-radius: 999px;
 }
 
-/* ===== RESET ===== */
+/* ===== CSS RESET AND GLOBAL STYLES ===== */
 /* Basic CSS reset to ensure consistent box-sizing and remove default margins/padding */
 * {
   box-sizing: border-box;
@@ -69,14 +69,14 @@ img {
   display: block;
 }
 
-/* ===== LAYOUT ===== */
+/* ===== LAYOUT UTILITIES ===== */
 /* Container class for centering content with max width */
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== HEADER AND NAVIGATION ===== */
 /* Header section padding */
 .site-header {
   padding: 12px 0;
@@ -127,7 +127,7 @@ img {
   font-weight: bold;
 }
 
-/* ===== HERO CARD ===== */
+/* ===== HERO SECTION ===== */
 /* Main hero section container with gradient background */
 .hero-card {
   width: min(1240px, 96%);
@@ -156,7 +156,7 @@ img {
   color: #f1f1f1;
 }
 
-/* ===== BOTONES ===== */
+/* ===== BUTTON STYLES ===== */
 /* Container for hero action buttons */
 .hero-actions {
   margin-top: 20px;
@@ -203,7 +203,7 @@ img {
   background: rgba(0, 0, 0, 0.25);
 }
 
-/* ===== ABOUT ===== */
+/* ===== ABOUT PAGE STYLES ===== */
 /* Content card container for about section */
 .content-card {
   width: min(1240px, 96%);
@@ -336,7 +336,7 @@ img {
   line-height: 1.6;
 }
 
-/* ===== CONTACT ===== */
+/* ===== CONTACT PAGE STYLES ===== */
 /* Grid layout for contact section */
 .contact-grid {
   display: grid;
@@ -359,11 +359,11 @@ img {
 
 /* Override form card margins in contact grid */
 .contact-grid .form-card {
-  margin: 0;     
-  max-width: 100%; 
+  margin: 0;
+  max-width: 100%;
 }
 
-/* ===== COMMITTEE ===== */
+/* ===== COMMITTEE PAGE STYLES ===== */
 /* Grid layout for committee members */
 .committee-grid {
   display: grid;
@@ -404,7 +404,7 @@ img {
   padding: 10px;
 }
 
-/* ===== EVENTS ===== */
+/* ===== EVENTS PAGE STYLES ===== */
 /* Grid layout for events */
 .real-events-grid {
   display: grid;
@@ -457,7 +457,7 @@ img {
   color: #f5f5f5;
 }
 
-/* ===== MODAL ===== */
+/* ===== MODAL STYLES ===== */
 /* Modal overlay background */
 .modal {
   display: none;
@@ -491,7 +491,7 @@ img {
   cursor: pointer;
 }
 
-/* ===== FORM ===== */
+/* ===== FORM STYLES ===== */
 /* Form card container */
 .form-card {
   background: #121212;
@@ -549,7 +549,7 @@ img {
   line-height: 1.6;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER STYLES ===== */
 /* Site footer styling */
 .site-footer {
   text-align: center;
@@ -557,7 +557,7 @@ img {
   color: var(--muted);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE DESIGN ===== */
 /* Media queries for responsive design on screens smaller than 900px */
 @media (max-width: 900px) {
   .hero-grid,

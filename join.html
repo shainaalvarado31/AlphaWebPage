@@ -1,14 +1,21 @@
+<!--
+    JOIN PAGE - Alpha Computer Association
+    ======================================
+    This page contains a membership application form for prospective members.
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join Alpha Computer Association. Fill out our membership application form to become part of our community focused on technology and leadership.">
   <title>Alpha Computer Association | Join</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- Site Header with Navigation -->
 <header class="site-header">
   <div class="container navbar">
     <div class="brand">
@@ -27,9 +34,10 @@
   </div>
 </header>
 
+<!-- Main Content Area -->
 <main class="page-section">
 
-  <!-- Intro -->
+  <!-- Introduction Section -->
   <section class="container">
     <h2 class="page-title">Join Alpha</h2>
     <p class="lead">
@@ -37,7 +45,7 @@
     </p>
   </section>
 
-  <!-- Form -->
+  <!-- Membership Application Form -->
   <section class="container form-card">
 
     <h3 class="section-title">Membership Application</h3>
@@ -45,26 +53,31 @@
     <form name="join-alpha" method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value="join-alpha">
 
+      <!-- Full Name Field -->
       <div class="form-group">
         <label for="name">Full Name</label>
         <input id="name" type="text" name="name" required>
       </div>
 
+      <!-- Student Number Field -->
       <div class="form-group">
         <label for="student-number">Student Number</label>
         <input id="student-number" type="text" name="student-number" required>
       </div>
 
+      <!-- Email Field -->
       <div class="form-group">
         <label for="email">Email</label>
         <input id="email" type="email" name="email" required>
       </div>
 
+      <!-- Major Field -->
       <div class="form-group">
         <label for="major">Major</label>
         <input id="major" type="text" name="major" required>
       </div>
 
+      <!-- Academic Year Dropdown -->
       <div class="form-group">
         <label for="year">Academic Year</label>
         <select id="year" name="year" required>
@@ -77,16 +90,19 @@
         </select>
       </div>
 
+      <!-- Areas of Interest Textarea -->
       <div class="form-group">
         <label for="interests">Areas of Interest</label>
         <textarea id="interests" name="interests" placeholder="Programming, Cybersecurity, Data, etc..."></textarea>
       </div>
 
+      <!-- Motivation Textarea -->
       <div class="form-group">
         <label for="message">Why do you want to join Alpha?</label>
         <textarea id="message" name="message"></textarea>
       </div>
 
+      <!-- Submit Button -->
       <button type="submit" class="submit-btn">Submit Application</button>
     </form>
 
@@ -94,6 +110,7 @@
 
 </main>
 
+<!-- Site Footer -->
 <footer class="site-footer">
   <div class="container">
     <p>© 2026 Shaina N. Alvarado Febus</p>
