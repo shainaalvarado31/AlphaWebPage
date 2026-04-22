@@ -2,91 +2,90 @@
     CONTACT PAGE - Alpha Computer Association
     ========================================
     This page provides contact information and a contact form for visitors to reach out
-    to Alpha Computer Association. It includes:
-    - Contact information (website, email)
-    - Contact form with fields for name, email, and message
-    - Call-to-action for collaboration and membership inquiries
+    to Alpha Computer Association.
 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta tags for character encoding, viewport, and page title -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Alpha Computer Association | Contact</title>
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Site header with navigation -->
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container navbar">
-            <!-- Organization logo -->
+
             <div class="brand">
-                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo" />
+                <img src="images/alpha-logo.png" class="logo" alt="Alpha Computer Association Logo">
             </div>
 
-            <!-- Main navigation menu -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Alpha</a>
                 <a href="committee.html">Committee</a>
                 <a href="events.html">Events & Activities</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
             </nav>
 
-            <!-- Call-to-action button for joining -->
             <a class="join-btn" href="join.html">Join Us</a>
         </div>
     </header>
 
-    <!-- Main content area -->
+    <!-- MAIN -->
     <main class="page-section">
-        <!-- Contact section with info and form -->
+
         <section class="container contact-grid">
 
-            <!-- Contact information -->
+            <!-- INFO -->
             <div class="contact-info">
-                <h2>Get in touch. Contact Us</h2>
+                <h2>Get in Touch</h2>
+
                 <p>
                     Want to collaborate with Alpha Computer Association, participate in
                     activities, or receive more information about membership? Contact us
                     through the form or our official channels.
                 </p>
 
-                <!-- Contact details -->
                 <p><strong>Website:</strong> alphacomputerassociation.com</p>
                 <p><strong>Email:</strong> alpha.ponce@gmail.com</p>
             </div>
 
-            <!-- Contact form -->
+            <!-- FORM -->
             <form class="form-card">
+
                 <label for="firstName">First Name</label>
-                <input id="firstName" type="text" placeholder="Enter your first name" />
+                <input id="firstName" name="firstName" type="text" placeholder="Enter your first name" required>
 
                 <label for="lastName">Last Name</label>
-                <input id="lastName" type="text" placeholder="Enter your last name" />
+                <input id="lastName" name="lastName" type="text" placeholder="Enter your last name" required>
 
                 <label for="email">Email Address</label>
-                <input id="email" type="email" placeholder="Enter your email" />
+                <input id="email" name="email" type="email" placeholder="Enter your email" required>
 
                 <label for="message">Message</label>
-                <textarea id="message" placeholder="Write your message"></textarea>
+                <textarea id="message" name="message" placeholder="Write your message" required></textarea>
 
                 <button type="submit">Submit</button>
+
             </form>
 
         </section>
+
     </main>
 
-    <!-- Site footer with copyright information -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2026 Shaina N. Alvarado Febus. All rights reserved.</p>
         </div>
     </footer>
-</body>
 
+</body>
 </html>

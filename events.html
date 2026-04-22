@@ -1,66 +1,50 @@
-<!--
-    EVENTS PAGE - Alpha Computer Association
-    =======================================
-    This page showcases Alpha Computer Association's events and activities.
-    It features a grid of event cards with posters and descriptions for:
-    - Member Meeting (board nomination/selection)
-    - Brownie Pre-Sale (fundraising activity)
-    - Business Intelligence en Acción (educational workshop)
-    Includes a modal for viewing enlarged event posters.
--->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta tags for character encoding, viewport, and page title -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alpha Computer Association | Events</title>
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Site header with navigation -->
+
     <header class="site-header">
         <div class="container navbar">
-            <!-- Organization logo -->
             <div class="brand">
-                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo" />
+                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo">
             </div>
 
-            <!-- Main navigation menu -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Alpha</a>
                 <a href="committee.html">Committee</a>
-                <a href="events.html">Events & Activities</a>
+                <a href="events.html" class="active">Events & Activities</a>
                 <a href="contact.html">Contact Us</a>
             </nav>
 
-            <!-- Call-to-action button for joining -->
             <a class="join-btn" href="join.html">Join Us</a>
         </div>
     </header>
 
-    <!-- Main content area -->
     <main class="page-section">
-        <!-- Page header section -->
         <section class="container">
             <h2 class="page-title">Events & Activities</h2>
-            <!-- Introductory lead paragraph -->
             <p class="lead">
                 Alpha Computer Association promotes participation, leadership, collaboration,
                 and student engagement through educational workshops, meetings, and fundraising initiatives.
             </p>
         </section>
 
-        <!-- Events grid section -->
         <section class="container events-grid real-events-grid">
-            <!-- Member Meeting Event -->
+            <h2 class="section-title">Our Events</h2>
+
             <article class="event-card real-event-card">
                 <div class="poster-wrapper">
-                    <img src="images/reunion-miembros.jpeg" alt="Member Meeting Event" class="event-poster" onclick="openModal(this.src)">
+                    <img src="images/reunion-miembros.jpeg"
+                         alt="Member Meeting Event"
+                         class="event-poster"
+                         onclick="openModal(this.src)">
                 </div>
                 <h3>Member Meeting</h3>
                 <p>
@@ -70,10 +54,12 @@
                 </p>
             </article>
 
-            <!-- Brownie Pre-Sale Event -->
             <article class="event-card real-event-card">
                 <div class="poster-wrapper">
-                    <img src="images/brownies.jpeg" alt="Brownie Pre-Sale Event" class="event-poster" onclick="openModal(this.src)">
+                    <img src="images/brownies.jpeg"
+                         alt="Brownie Pre-Sale Event"
+                         class="event-poster"
+                         onclick="openModal(this.src)">
                 </div>
                 <h3>Brownie Pre-Sale</h3>
                 <p>
@@ -83,10 +69,12 @@
                 </p>
             </article>
 
-            <!-- Business Intelligence Workshop -->
             <article class="event-card real-event-card">
                 <div class="poster-wrapper">
-                    <img src="images/bi-accion.jpeg" alt="Business Intelligence Event" class="event-poster" onclick="openModal(this.src)">
+                    <img src="images/bi-accion.jpeg"
+                         alt="Business Intelligence Event"
+                         class="event-poster"
+                         onclick="openModal(this.src)">
                 </div>
                 <h3>Business Intelligence en Acción</h3>
                 <p>
@@ -98,21 +86,17 @@
         </section>
     </main>
 
-    <!-- Site footer with copyright information -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2026 Shaina N. Alvarado Febus. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Image modal for viewing enlarged event posters -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg" alt="Expanded event poster">
+        <img class="modal-content" id="modalImg" src="images/reunion-miembros.jpeg" alt="Expanded event poster">
     </div>
 
-    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 </body>
-
 </html>

@@ -1,34 +1,27 @@
-<!--
-    ABOUT PAGE - Alpha Computer Association
-    ======================================
-    This page provides information about Alpha Computer Association's mission, vision,
-    and features the organization's mascot Pablito. It includes sections for:
-    - Mission and Vision statements
-    - Fun fact about the mascot
-    - Featured image with caption about workshops
--->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Meta tags for character encoding, viewport, and page title -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- IMPORTANTE: charset debe ser lo primero -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Alpha Computer Association | About</title>
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Site header with navigation -->
+
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container navbar">
-            <!-- Organization logo -->
+
             <div class="brand">
-                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo" />
+                <img src="images/alpha-logo.png" class="logo" alt="Alpha Logo">
             </div>
 
-            <!-- Main navigation menu -->
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About Alpha</a>
@@ -37,20 +30,17 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
 
-            <!-- Call-to-action button for joining -->
             <a class="join-btn" href="join.html">Join Us</a>
         </div>
     </header>
 
-    <!-- Main content area -->
+    <!-- MAIN -->
     <main>
 
-        <!-- 🔹 SECTION 1: Mission & Vision -->
-        <!-- Two-column section displaying mission and vision statements with featured image -->
+        <!-- SECTION 1: Mission & Vision -->
         <section class="content-card">
             <div class="two-col">
 
-                <!-- Mission and vision boxes -->
                 <div class="mission-grid">
                     <div class="mission-box">
                         <h3>Mission</h3>
@@ -76,20 +66,18 @@
                     </div>
                 </div>
 
-                <!-- Featured image of Alpha activity -->
+                <!-- Imagen -->
                 <div class="feature-image">
-                    <img src="images/alpha-activity.jpeg" alt="Alpha Computer Association activity" />
+                    <img src="images/alpha-activity.jpeg" alt="Alpha Computer Association activity">
                 </div>
 
             </div>
         </section>
 
-        <!-- 🔹 SECTION 2: Fun Fact (Pablito) -->
-        <!-- Section featuring the organization's mascot with fun fact -->
+        <!-- SECTION 2: Pablito -->
         <section class="content-card">
             <div class="fun-fact">
 
-                <!-- Mascot image -->
                 <img src="images/pablito.png" alt="Pablito Mascot" class="pablito-img">
 
                 <h3>Fun Fact</h3>
@@ -103,12 +91,12 @@
             </div>
         </section>
 
-        <!-- 🔹 SECTION 3: Extra Image -->
-        <!-- Section with overlay image and caption about workshops -->
+        <!-- SECTION 3: Extra Image -->
         <section class="content-card">
             <div class="extra-image">
+
                 <img src="images/alpha-event.jpeg" alt="Alpha workshop or event">
-                <!-- Caption overlay on the image -->
+
                 <div class="image-caption">
                     <h3>Hands-on Workshops</h3>
                     <p>
@@ -117,20 +105,21 @@
                         problem-solving in real-world scenarios.
                     </p>
                 </div>
+
             </div>
         </section>
 
     </main>
 
-    <!-- Site footer with copyright information -->
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <p>© 2026 Shaina N. Alvarado Febus. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Link to external JavaScript file -->
+    <!-- JS -->
     <script src="script.js"></script>
-</body>
 
+</body>
 </html>
